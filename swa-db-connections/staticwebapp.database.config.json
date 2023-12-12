@@ -13,6 +13,17 @@
       "path": "/rest",
       "request-body-strict": true
     },
+    "networking": {
+      "allowedIpRanges": ["AzureFrontDoor.Backend"]
+    },
+    "forwardingGateway": {
+      "requiredHeaders": {
+        "X-Azure-FDID" : "5dc70b3d-0f88-4572-9f6b-0cd0242d5f67"
+      },
+      "allowedForwardedHosts": [
+        "eam-data-api-new-c0ayceh5ehcsa7cb.z02.azurefd.net"
+      ]
+    },
     "graphql": {
       "enabled": true,
       "path": "/graphql",
